@@ -33,4 +33,84 @@ body {
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	position: relative;
 }
+
+.logo-box {
+	position: absolute;
+	top: 2.5rem;
+	left: 2.5rem;
+}
+
+.logo {
+	height: 2rem;
+}
+
+.text-box {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+
+	/*cool trick to stop the annimation for shaking   */
+	backface-visibility: hidden;
+}
+
+.heading-primary__main {
+	display: block;
+	font-size: 4rem;
+	font-weight: 400;
+	letter-spacing: 2rem;
+	animation-name: moveToLeft;
+	animation-duration: 2s;
+	animation-timing-function: ease-in;
+}
+
+.heading-primary__sub {
+	display: block;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: 1.2rem;
+	animation-name: moveToRight;
+	animation-duration: 2s;
+	animation-timing-function: ease-in;
+}
+
+/* Animation */
+@keyframes moveToLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	80% {
+		transform: translateX(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes moveToRight {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	80% {
+		transform: translateX(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+/*********/
