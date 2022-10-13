@@ -7,10 +7,15 @@ Dark-green:#28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
 }
 
 body {
@@ -20,6 +25,7 @@ body {
 	line-height: 1.7;
 	color: #777;
 	padding: 2rem;
+	box-sizing: border-box;
 }
 
 .header {
@@ -36,17 +42,17 @@ body {
 	position: relative;
 }
 
-.logo-box {
+.header__logo-box {
 	position: absolute;
 	top: 2.5rem;
 	left: 2.5rem;
 }
 
-.logo {
+.header__logo {
 	height: 2rem;
 }
 
-.text-box {
+.header__text-box {
 	position: absolute;
 	top: 40%;
 	left: 50%;
@@ -63,7 +69,7 @@ body {
 	margin-bottom: 3rem;
 }
 
-.heading-primary__main {
+.heading-primary--main {
 	display: block;
 	font-size: 4rem;
 	font-weight: 400;
@@ -73,7 +79,7 @@ body {
 	animation-timing-function: ease-in;
 }
 
-.heading-primary__sub {
+.heading-primary--sub {
 	display: block;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -95,7 +101,7 @@ body {
 	position: relative;
 }
 
-.btn-white {
+.btn--white {
 	background-color: #fff;
 	color: #777;
 }
@@ -122,7 +128,7 @@ body {
 	z-index: -1;
 	transition: all 0.4s;
 }
-.btn-white::after {
+.btn--white::after {
 	background-color: #fff;
 }
 
@@ -132,7 +138,7 @@ body {
 	opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
 	animation: moveButtomToUp 1.2s ease-in 0.75s;
 	/* another trick to make the btn hidden before the animation start */
 	animation-fill-mode: backwards;
