@@ -1,0 +1,27 @@
+.heading-primary {
+	color: $color-white;
+	text-transform: uppercase;
+
+	/*cool trick to stop the annimation for shaking   */
+	backface-visibility: hidden;
+	margin-bottom: 3rem;
+	&--main {
+		display: block;
+		font-size: 4rem;
+		font-weight: 400;
+		letter-spacing: 2rem;
+		animation-name: moveToLeft;
+		animation-duration: 2s;
+		animation-timing-function: ease-in;
+	}
+
+	&--sub {
+		display: block;
+		font-size: 1.2rem;
+		font-weight: 700;
+		letter-spacing: 1.2rem;
+		animation-name: moveToRight;
+		animation-duration: 2s;
+		animation-timing-function: ease-in;
+	}
+}
