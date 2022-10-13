@@ -5,186 +5,180 @@ light-green: #76d56f
 Medium-green:#55c57a
 Dark-green:#28b485
 
-*/
 
+*/
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
+
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	font-family: 'lato', sans-serif;
-	font-weight: 400;
-	font-size: 2rem;
-	line-height: 1.7;
-	color: #777;
-	padding: 2rem;
-	box-sizing: border-box;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .header {
-	height: 95vh;
-	background-image: linear-gradient(
-			to right bottom,
-			rgba(128, 214, 113, 0.712),
-			rgba(40, 180, 133, 0.733)
-		),
-		url('../images//hero.jpg');
-	background-size: cover;
-	background-position: top;
-	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-	position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(118, 213, 111, 0.712), rgba(40, 180, 133, 0.733)), url("../images//hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
 }
 
 .header__logo-box {
-	position: absolute;
-	top: 2.5rem;
-	left: 2.5rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
 }
 
 .header__logo {
-	height: 2rem;
+  height: 2rem;
 }
 
 .header__text-box {
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
-	color: #fff;
-	text-transform: uppercase;
-
-	/*cool trick to stop the annimation for shaking   */
-	backface-visibility: hidden;
-	margin-bottom: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  /*cool trick to stop the annimation for shaking   */
+  backface-visibility: hidden;
+  margin-bottom: 3rem;
 }
 
 .heading-primary--main {
-	display: block;
-	font-size: 4rem;
-	font-weight: 400;
-	letter-spacing: 2rem;
-	animation-name: moveToLeft;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
+  display: block;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 2rem;
+  animation-name: moveToLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 
 .heading-primary--sub {
-	display: block;
-	font-size: 1.2rem;
-	font-weight: 700;
-	letter-spacing: 1.2rem;
-	animation-name: moveToRight;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.2rem;
+  animation-name: moveToRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
+
 .btn:link,
 .btn:visited {
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 0.7rem 2.2rem;
-	display: inline-block;
-	font-size: 0.9rem;
-	border-radius: 8rem;
-	/*when i'm not sure the animation i want  */
-	transition: all 0.2s;
-	position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 2.2rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  border-radius: 8rem;
+  /*when i'm not sure the animation i want  */
+  transition: all 0.2s;
+  position: relative;
 }
 
 .btn--white {
-	background-color: #fff;
-	color: #777;
+  background-color: #fff;
+  color: #777;
 }
 
 .btn:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
 .btn:active {
-	transform: translateY(-1px);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn::after {
-	/* always add the content to pseudo element otherwise it will not work  */
-	content: '';
-	display: inline-block;
-	height: 100%;
-	width: 100%;
-	border-radius: 200px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	transition: all 0.4s;
+  /* always add the content to pseudo element otherwise it will not work  */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
 }
+
 .btn--white::after {
-	background-color: #fff;
+  background-color: #fff;
 }
 
 .btn:hover::after {
-	transform: scale(1.3, 1.7);
-	/* the trick behind the feeding of the btn */
-	opacity: 0;
+  transform: scale(1.3, 1.7);
+  /* the trick behind the feeding of the btn */
+  opacity: 0;
 }
 
 .btn--animated {
-	animation: moveButtomToUp 1.2s ease-in 0.75s;
-	/* another trick to make the btn hidden before the animation start */
-	animation-fill-mode: backwards;
+  animation: moveButtomToUp 1.2s ease-in 0.75s;
+  /* another trick to make the btn hidden before the animation start */
+  animation-fill-mode: backwards;
 }
+
 /* Animation */
 @keyframes moveToLeft {
-	0% {
-		opacity: 0;
-		transform: translateX(-100px);
-	}
-
-	80% {
-		transform: translateX(10px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 @keyframes moveToRight {
-	0% {
-		opacity: 0;
-		transform: translateX(100px);
-	}
-
-	80% {
-		transform: translateX(-10px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
 @keyframes moveButtomToUp {
-	0% {
-		opacity: 0;
-		transform: translateY(100px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 /*********/
+
+/*# sourceMappingURL=style.css.map */
