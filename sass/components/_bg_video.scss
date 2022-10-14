@@ -1,0 +1,21 @@
+.bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -5;
+	opacity: 30%;
+	overflow: hidden;
+
+	&__content {
+		height: 100%;
+		width: 100%;
+
+		//the trick is object-fit work with html element
+		//example parent and child , when child get object-fit on image or video or
+		//something it will cover the parent element
+
+		object-fit: cover;
+	}
+}
