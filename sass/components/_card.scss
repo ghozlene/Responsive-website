@@ -1,10 +1,11 @@
+//this form fonctionality
 .card {
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
-	height: 50rem;
+	height: 51rem;
 	&__side {
-		height: 50rem;
+		height: 51rem;
 		transition: all 0.8s ease;
 		position: absolute;
 		top: 0;
@@ -12,7 +13,8 @@
 		width: 100%;
 		//one of the tricks to one of the face of the card hidden
 		backface-visibility: hidden;
-		border-radius: 0.3rem;
+		border-radius: 2rem;
+		overflow: hidden;
 		box-shadow: 0 2rem 5rem rgba($color-black, 0.7);
 		&-front {
 			background-color: $color-white;
@@ -34,5 +36,69 @@
 	}
 	&:hover &__side-back {
 		transform: rotateY(0);
+	}
+	//Styling the front of the card
+
+	&__picture {
+		background-size: cover;
+		height: 23rem;
+
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		//a new trick
+		background-blend-mode: soft-light;
+		&-1 {
+			background-image: linear-gradient(
+					to right bottom,
+					$color-secondary-light,
+					$color-secondary-dark
+				),
+				url('../images/nat-5.jpg');
+		}
+		&-2 {
+			background-image: url('../images/nat-5.jpg');
+		}
+		&-3 {
+			background-image: url('../images/nat-5.jpg');
+		}
+	}
+	&__heading {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		word-spacing: 0.2rem;
+		color: $color-white;
+		position: absolute;
+		text-align: right;
+		top: 12rem;
+		right: 2rem;
+		margin-top: -2rem;
+		width: 75%;
+	}
+	&__heading-span {
+		&--1 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($color-secondary-light, 0.85),
+				rgba($color-secondary-dark, 0.85)
+			);
+		}
+	}
+	&__details {
+		padding: 1rem;
+		ul {
+			list-style-type: none;
+			width: 80%;
+
+			margin: 0 auto;
+			li {
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+				&:not(:last-child) {
+					border-bottom: 1px solid $color-grey-light-2;
+				}
+			}
+		}
 	}
 }
