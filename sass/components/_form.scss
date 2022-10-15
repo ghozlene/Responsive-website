@@ -13,6 +13,7 @@
 		border-bottom: 5px solid transparent;
 		width: 90%;
 		display: block;
+		transition: all 0.7s;
 
 		&:focus {
 			outline: none;
@@ -38,5 +39,49 @@
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-4rem);
+	}
+
+	&__radio-group {
+		display: inline-block;
+	}
+
+	&__radio-label {
+		font-size: $default-font-size;
+		cursor: pointer;
+		padding-right: 8rem;
+		width: 50%;
+		position: relative;
+		padding: 4rem;
+	}
+	&__radio-input {
+		display: none;
+	}
+	&__radio_button {
+		height: 2rem;
+		width: 2rem;
+		border: 0.4rem solid $color-primary;
+		border-radius: 50%;
+		display: inline-block;
+		position: absolute;
+		top: 4.2rem;
+		left: -0.5rem;
+
+		&::after {
+			content: '';
+			display: block;
+			height: 1rem;
+			width: 1rem;
+			border-radius: 50%;
+			position: absolute;
+			top: 10%;
+			left: 50%;
+			transform: translate(-50%);
+			background-color: $color-primary;
+			opacity: 0;
+			transition: opacity 0.2s;
+		} /*  magic tick behind showing the custom radio btn*/
+	}
+	&__radio-input:checked ~ &__radio-label &__radio_button::after {
+		opacity: 1;
 	}
 }
