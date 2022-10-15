@@ -545,9 +545,9 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(118, 213, 111, 0.712), rgba(40, 180, 133, 0.733)), url("../images//hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(118, 213, 111, 0.512), rgba(40, 180, 133, 0.533)), url("../images/sebin.jpg");
   background-size: cover;
-  background-position: top;
+  background-position: 0;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
@@ -622,8 +622,9 @@ body {
 }
 .footer__logo {
   padding-top: 5rem;
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 150px;
+  border-radius: 80%;
 }
 .footer__alignement {
   display: flex;
@@ -672,6 +673,70 @@ body {
   position: absolute;
 }
 
+.navigation__checkbox {
+  display: none;
+}
+.navigation__button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 5.5rem;
+  right: 5.5rem;
+  z-index: 11;
+  border-radius: 50%;
+}
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  background-image: radial-gradient(#76d56f, #28b485);
+  z-index: 10;
+  transform: scale(80);
+}
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  position: relative;
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  top: 50%;
+  right: 30%;
+}
+.navigation__item {
+  margin: 1rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 220%;
+  transition: all 1s;
+}
+.navigation__link:active, .navigation__link:hover {
+  background-position: 100%;
+  color: #28b485;
+  transform: translateX(0.5rem);
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -680,7 +745,7 @@ body {
 
 .section-feature {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(118, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../images/nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(118, 213, 111, 0.63), rgba(40, 180, 133, 0.63)), url("../images/tim.jpg");
   background-size: cover;
   margin-top: -10rem;
   transform: skewY(-7deg);
