@@ -5,7 +5,7 @@
 			rgba($color-primary-light, 0.512),
 			rgba($color-primary-dark, 0.533)
 		),
-		url('../images/sebin.jpg');
+		url('./images/sebin.jpg');
 	background-size: cover;
 	background-position: 0;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
