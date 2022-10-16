@@ -12,7 +12,12 @@
 		width: 100px;
 		height: 150px;
 		border-radius: 80%;
+		transition: transform 1s;
+		&:hover {
+			transform: scale(1.2);
+		}
 	}
+
 	&__alignement {
 		display: flex;
 		justify-content: space-between;
