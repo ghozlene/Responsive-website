@@ -1,3 +1,8 @@
+/*
+0-->600px : Phone
+600-->900px : tablet
+
+*/
 *,
 *::after,
 *::before {
